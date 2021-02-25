@@ -27,7 +27,7 @@ SECRET_KEY = 'zrc$lmh5gm0-2a7l=5m0n=l#&@jhaaxfj%str1bsd%f+oak(^o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -144,15 +144,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (str(BASE_DIR.joinpath('static')),)
-STATIC_ROOT= str(BASE_DIR.joinpath("staticfiles"))
-STATICFILES_FINDERS = [
-    "django.contrib.staticfiles.finders.FileSystemFinder",
-    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
-]
-
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 SITE_ID= 1
 
